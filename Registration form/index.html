@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <script src="./myscript.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h2 style="text-align: center">Registration Form</h2>
+    <form
+      action="wwe.php"
+      method="POST"
+      onsubmit="return validateForm()"
+    >
+      <label for="fullname">Full Name:</label> 
+      <input type="text" id="fullname" name="fullname" /><br /><br />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" /><br /><br />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required /><br /><br />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required /><br /><br />
+
+      <label for="address">Address:</label>
+      <textarea
+        id="address"
+        name="address"
+        rows="4"
+        cols="30"
+        required
+      ></textarea
+      ><br /><br />
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required /><br /><br />
+
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required /><br /><br />
+
+      <label for="zip">Zip Code:</label>
+      <input type="text" id="zip" name="zip" required /><br /><br />
+
+      <label for="country">Country:</label>
+      <input type="text" id="country" name="country" required /><br /><br />
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required /><br /><br />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <label for="confirm_password">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirm_password"
+        name="confirm_password"
+        required
+      /><br /><br />
+
+      <input type="submit" value="Submit" id="submit" name="submit" />
+    </form>
+  </body>
+</html>

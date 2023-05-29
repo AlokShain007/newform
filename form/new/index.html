@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="start">
+        <form class="from" id="form" onsubmit="validate()">
+            <h2 style="margin-left: 125px"><u style="text-align: center;">Registration form</u></h2>
+            <div class="form-group ">
+                <label class="content"> First Name:</label>
+                <input type=" text" placeholder="enter first name" onkeyup="firstname()" id="firstName"
+                    class="form-control " autocomplete="off" style="margin-left: 104px;">
+                <span id="errorFirstName" style="color: red;"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="content"> Last Name:</label>
+                <input type=" text" placeholder="enter last name" onkeyup="lastname()" id="lastName"
+                    class="form-control" autocomplete="off"style="margin-left: 107px;">
+                <span id="errorlastname"style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="dob" class="content">Date of Birth:</label>
+               <input type="date" id="dob" name="dob"  min="1995-01-1" max="2023-04-13" class="form-control"style="margin-left: 82px;">
+                </div>
+    
+            <div class="form-group">
+                <label class="content"> Email-id:</label>
+                <input type=" email" placeholder="enter email ID" id="email" onkeyup="Emailid()" class="form-control"style="margin-left: 136px;"
+                    autocomplete="off">
+                <span id="erroremail"style="color: red;"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="country-select" class="content">Select country:</label>
+                <select id="country-select" onclick="phonenumber()" style="width:190px;
+                height: 25px;
+                border-radius: 5px;
+                margin-left: 63px;">
+                  <option value="">--Please select a country--</option>
+                  <option value="india">India</option>
+                  <option value="nepal">Nepal</option>
+                </select>
+                <br>
+                <div>
+                    <label for="phone-input" class="content">Phone number:</label>
+                  <input type="text" id="code-input" name="code" readonly class="cco" style="width: 30px; margin-left:57px"><span>
+                  <input type="number" id="phone-input" name="phone" minlength="10" maxlength="10" class="pnu"></span>
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <label class="content">Password:</label>
+                <input type="password" placeholder="Enter password" onkeyup="passwords()" id="Password"
+                    class="form-control" autocomplete="off"style="margin-left: 119px;">
+                <span id="errorPassword"style="color: red;"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="content">Confirm Password:</label>
+                <input type="password" placeholder="enter confirm password" onkeyup="confirmPasswords()"
+                    id="confirmPassword" class="form-control" autocomplete="off"style="margin-left:19px">
+                <span id="errorconfirmPassword"style="color: red;"></span>
+
+            </div>    
+            
+            <label for="file" class="content">Choose file:</label>
+            <input type="file" name="image" id="image" accept=".pdf .txt .docx" maxlength="5000000"   />
+
+
+
+          <div><input type="submit" name="submit" class="submit"></div>
+        </form>
+    </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
